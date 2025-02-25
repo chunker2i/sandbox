@@ -1,0 +1,25 @@
+@use '@core/colors';
+
+.body {
+    background-color: colors.base(colors.$content);
+	color: colors.content(colors.$content);
+}
+.button {
+	background-color: colors.base(colors.$accent);
+	color: colors.content(colors.$accent);
+	border: none;
+	padding: 8px 24px;
+	font-size: 16px;
+	line-height: 1.5;
+	border-radius: 24px;
+	cursor: pointer;
+	transition: background-color ease-in-out 200ms;
+
+	&:hover {
+		background-color: colors.light(colors.$accent);
+	}
+
+	&:active {
+		background-color: colors.dark(colors.$accent);
+	}
+}
