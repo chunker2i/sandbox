@@ -6,7 +6,7 @@ export default defineConfig({
     resolve: {
         alias: {
             '@config': path.resolve(__dirname, 'resources/scss/config'),
-            '@core': path.resolve(__dirname, 'resources/scss/core')
+            '@core': path.resolve(__dirname, 'chunker2i/base/resources/scss/core')
         }
     },
     plugins: [
