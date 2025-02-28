@@ -1,9 +1,11 @@
-@use '@core/reset';
-@use '@core/colors';
+@use "@core/reset";
+@use "@core/colors";
+@use "@core/viewports";
 
 .body {
     background-color: colors.base(colors.$content);
 	color: colors.content(colors.$content);
+	font-family: sans-serif;
 }
 .button {
 	background-color: colors.base(colors.$accent);
@@ -23,4 +25,30 @@
 	&:active {
 		background-color: colors.dark(colors.$accent);
 	}
+}
+
+.viewports {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	padding: 40px;
+}
+.viewport {
+	display: none;
+	padding: 12px 20px;
+	background-color: colors.base(colors.$viewport);
+	color: colors.content(colors.$viewport);
+	border: 1px solid colors.dark(colors.$viewport);
+	border-radius: 4px;
+
+	&_mobile { @include viewports.mobile { display: block; } }
+	&_phone { @include viewports.phone { display: block; } }
+	&_phone-portrait { @include viewports.phone-portrait { display: block; } }
+	&_phone-landscape { @include viewports.phone-landscape { display: block; } }
+	&_tablet { @include viewports.tablet { display: block; } }
+	&_tablet-portrait { @include viewports.tablet-portrait { display: block; } }
+	&_tablet-landscape { @include viewports.tablet-landscape { display: block; } }
+	&_desktop { @include viewports.desktop { display: block; }}
+	&_laptop { @include viewports.laptop { display: block; } }
+	&_wide { @include viewports.wide { display: block; } }
 }
