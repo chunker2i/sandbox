@@ -1,11 +1,13 @@
 @use "@core/reset";
-@use "@core/colors";
 @use "@core/viewports";
+@use "@core/colors";
+@use "@core/rem";
 
 .body {
     background-color: colors.base(colors.$content);
 	color: colors.content(colors.$content);
 	font-family: sans-serif;
+	font-size: 16rem;
 }
 .button {
 	background-color: colors.base(colors.$accent);
