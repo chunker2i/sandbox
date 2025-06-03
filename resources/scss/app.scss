@@ -4,6 +4,8 @@
 @use "@core/colors";
 @use "@core/rem";
 
+@use "@blocks/utils";
+
 .body {
     background-color: colors.base(colors.$content);
 	color: colors.content(colors.$content);
@@ -11,13 +13,15 @@
 	font-size: 16rem;
 }
 .button {
+	display: flex;
+	gap: 4rem;
 	background-color: colors.base(colors.$accent);
 	color: colors.content(colors.$accent);
 	border: none;
-	padding: 8px 24px;
-	font-size: 16px;
+	padding: 8rem 24rem;
+	font-size: 16rem;
 	line-height: 1.5;
-	border-radius: 24px;
+	border-radius: 24rem;
 	cursor: pointer;
 	transition: background-color ease-in-out 200ms;
 
@@ -33,16 +37,16 @@
 .viewports {
 	display: flex;
 	flex-direction: column;
-	gap: 16px;
-	padding: 40px;
+	gap: 16rem;
+	padding: 40rem;
 }
 .viewport {
 	display: none;
-	padding: 12px 20px;
+	padding: 12rem 20rem;
 	background-color: colors.base(colors.$viewport);
 	color: colors.content(colors.$viewport);
-	border: 1px solid colors.dark(colors.$viewport);
-	border-radius: 4px;
+	border: 1rem solid colors.dark(colors.$viewport);
+	border-radius: 4rem;
 
 	&_mobile { @include viewports.mobile { display: block; } }
 	&_phone { @include viewports.phone { display: block; } }

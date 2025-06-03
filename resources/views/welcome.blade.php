@@ -10,6 +10,8 @@
 
     <h1>Тест вьюпорта</h1>
 
+    <x-utils::icon name="bars"/>
+
     <div class="viewports">
 	    <p class="viewport viewport_mobile">Мобильное устройство</p>
 	    <p class="viewport viewport_phone">Смартфон</p>
@@ -24,7 +26,8 @@
     </div>
 
     <button type="button" class="button">
-	    Кнопка
+	    <x-utils::icon name="bars"/>
+	    <span>Кнопка</span>
     </button>
 
     </body>
